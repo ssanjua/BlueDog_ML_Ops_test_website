@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'goals' => $futureGoals
     );
 
-    $apiUrl = 'http://127.0.0.1:8000/recommend';
+    $apiUrl = 'hhttps://bluedog-86d7ab645e30.herokuapp.com/recommend';
 
     $curl = curl_init();
 
