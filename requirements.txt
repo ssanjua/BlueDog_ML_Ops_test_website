@@ -1,11 +1,11 @@
-fastapi==0.65.1
-pydantic==1.10.7
-nltk==3.6.2
+fastapi
+pydantic
+nltk
 scikit-learn
 sklearn
 pandas
 scipy
 numpy
-mysql-connector-python==8.0.26
-joblib==1.0.1
+mysql-connector-python
+joblib
 uvicorn
