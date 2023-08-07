@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import nltk
 from nltk.corpus import stopwords
@@ -14,19 +14,24 @@ app = FastAPI()
 
 def get_data_from_db():
     conn = mysql.connector.connect(
-    host="localhost",
-    user="id21118998_ppaupallares",
-    password="NEVERmind38@",
-    database="id21118998_db_hosting",
-)
+        host="localhost",
+        user="id21118998_ppaupallares",
+        password="NEVERmind38@",
+        database="id21118998_db_hosting"
+    )   
 
     df = pd.read_sql("SELECT * FROM modelTraining ORDER BY id  DESC LIMIT 1", conn)
     conn.close()
     return df
 
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
 # Descargar recursos necesarios de nltk
 nltk.download('stopwords')
 nltk.download('wordnet')
+nltk.download('punkt')
 
 # Lematizador y stopwords
 lemmatizer = WordNetLemmatizer()
@@ -51,8 +56,23 @@ class RecommendationInput(BaseModel):
     work_availability: str
     goals: str
 
+def get_recommendation(data: dict):
+    try:
+        clf = joblib.load('clf.joblib')
+        interests = np.array(data['interests'])
+        education = data['education']
+        study_availability = data['study_availability']
+        work_availability = data['work_availability']
+        goals = data['goals']
+        features = np.concatenate(([education, study_availability, work_availability], interests))
+        recommendation = clf.predict([features])[0]
+        return {"recommendation": recommendation}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
 @app.post("/recommend")
 def recommend_course(data: RecommendationInput):
+    
     goals_processed = preprocess_text(data.goals)
     goals_vectorized = vectorizer.transform([goals_processed])
 
@@ -66,6 +86,7 @@ def recommend_course(data: RecommendationInput):
 
     user_encoded = encoder.transform(user_data.drop(columns=['goals'])).toarray()
     user_combined = np.hstack([user_encoded, goals_vectorized.toarray()])
-    recommendation = clf.predict(user_combined)
+    #recommendation = clf.predict(user_combined)
+    recommendation = get_recommendation(data)
 
     return {"recommendation": recommendation[0]}
