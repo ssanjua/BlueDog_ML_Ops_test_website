@@ -57,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (curl_errno($curl)) {
         echo 'Error al hacer la solicitud al API del modelo: ' . curl_error($curl);
+        error_log('Error al hacer la solicitud al API del modelo: ' . curl_error($curl));
     } else {
         $result = json_decode($response, true);
         if ($result && isset($result['recommendation'])) {
@@ -65,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } else {
             echo "Hubo un error al obtener la recomendación.";
+            error_log('Hubo un error al obtener la recomendación.');
         }
     }
 
