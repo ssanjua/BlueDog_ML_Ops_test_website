@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation result by Pau</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+    <!-- Estilos de Slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="https://bluedogtraining.com.au/storage/app/media/MAIN_DOGGO_LOGO.svg" alt="BlueDog Logo" class="header-logo">
+            <div class="header-text">
+                <h1>Bluedog Training Recommendation Course</h1>
+                <p>Completa el siguiente formulario y descubre qué curso es el mejor para ti.</p>
+            </div>
+        </div>
+    </header>
+    
+
+    <nav class="dropdown-menu">
+        <ul>
+            <li>
+                ABOUT BLUEDOG
+                <ul>
+                    <li><a href="#">Dónde está ubicado</a></li>
+                    <li><a href="#">Sobre el equipo de bluedog</a></li>
+                </ul>
+            </li>
+            <li>
+                ABOUT THE COURSES
+                <ul>
+                    <li><a href="#">White cart</a></li>
+                    <li><a href="#">Vet school</a></li>
+                    <li><a href="#">Certificate IV</a></li>
+                </ul>
+            </li>
+            <li>
+                ABOUT THIS WEB
+                <ul>
+                    <li><a href="#">About Pau</a></li>
+                    <li><a href="#">About the recommendation system</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Aquí irá el slider -->
+    <div class="your-slider">
+        <div><img src="src/giphy_postHigh.gif" alt="data"></div>
+        <div><img src="src/codeThis.gif" alt="letscode"></div>
+        <div><img src="src/datadata.gif" alt="hackergif"></div>
+        <div><img src="src/hacker.gif" alt="hackergif"></div>
+    </div>
+
+    <main>
+        <div class="explanation">
+            <h1>Recomendación de Curso</h1>
+            <p>Tu curso recomendado es:</p>
+            <div id="recommendationDisplay"></div>
+        </div>
+    
+        <script>
+            // Función para obtener parámetros de la URL
+            function getQueryParam(param) {
+                var result = window.location.search.match(new RegExp("(\\?|&)" + param + "(\\[\\])?=([^&]*)"));
+                return result ? decodeURIComponent(result[3].replace(/\+/g, ' ')) : null;
+            }
+        
+            // Obtener el valor de la recomendación de la URL
+            var recommendation = getQueryParam('recommendation');
+        
+            // Mostrar la recomendación en el cuerpo del documento HTML
+            document.addEventListener('DOMContentLoaded', function() {
+                // Suponiendo que tienes un elemento con el ID 'recommendationDisplay' para mostrar la recomendación
+                var displayElement = document.getElementById('recommendationDisplay');
+                if (displayElement && recommendation) {
+                    displayElement.textContent = recommendation;
+                }
+            });
+        </script>
+        
+        
+
+    </main>
+
+    <footer>
+        <p>Desarrollado por Paula Pallares para Blue Dog</p>
+    </footer>
+
+  
+    <!-- Primero, cargamos jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- Después, cargamos el script de Slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <!-- Por último, cargamos nuestro script personalizado -->
+    <script src="scripts.js"></script>
+
+
+</body>
+</html>
