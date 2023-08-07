@@ -2,7 +2,6 @@ fastapi
 pydantic
 nltk
 scikit-learn
-sklearn
 pandas
 scipy
 numpy
