@@ -17,7 +17,7 @@ def get_data_from_db():
     host="localhost",
     user="id21118998_ppaupallares",
     password="NEVERmind38@",
-    database="d21118998_db_hosting",
+    database="id21118998_db_hosting",
 )
 
     df = pd.read_sql("SELECT * FROM modelTraining ORDER BY id  DESC LIMIT 1", conn)
