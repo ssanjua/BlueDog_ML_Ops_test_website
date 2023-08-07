@@ -5,9 +5,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $server = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user_answer";
+$username = "id21118998_ppaupallares";
+$password = "NEVERmind38@";
+$dbname = "id21118998_db_hosting";
 
 $conn = new mysqli($server, $username, $password, $dbname);
 
@@ -44,6 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $response = curl_exec($curl);
 
     $stmt = $conn->prepare("INSERT INTO answers (interests, education, study, job, goals) VALUES (?, ?, ?, ?, ?)");
+    if ($stmt === false) {
+        die("Error preparando la consulta: " . $conn->error);
+    }
     $stmt->bind_param("sssss", $interests, $education, $studyAvailability, $workAvailability, $futureGoals);
 
     if (!$stmt->execute()) {

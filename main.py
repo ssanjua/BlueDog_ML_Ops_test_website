@@ -14,12 +14,11 @@ app = FastAPI()
 
 def get_data_from_db():
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="user_answer",
-        port=3307 
-    )
+    host="localhost",
+    user="id21118998_ppaupallares",
+    password="NEVERmind38@",
+    database="d21118998_db_hosting",
+)
 
     df = pd.read_sql("SELECT * FROM modelTraining ORDER BY id  DESC LIMIT 1", conn)
     conn.close()
