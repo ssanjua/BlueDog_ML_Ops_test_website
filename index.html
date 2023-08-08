@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bluedog Training by Pau</title>
     <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" href="src/pp.png" type="image/x-icon">
     
-    <!-- Estilos de Slick -->
+    <!--slick -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
-
 
 </head>
 <body>
@@ -17,41 +17,40 @@
         <div class="header-content">
             <img src="https://bluedogtraining.com.au/storage/app/media/MAIN_DOGGO_LOGO.svg" alt="BlueDog Logo" class="header-logo">
             <div class="header-text">
-                <h1>Bluedog Training Recommendation Course</h1>
-                <p>Completa el siguiente formulario y descubre qué curso es el mejor para ti.</p>
+                <h1>BLUE DOG TRAINING - RECOMMENDATION COURSE</h1>
+                <p>👷🏾 LOOKING FOR WORK? 👷🏻‍♀️ WE ARE HERE TO HELP YOU 👷🏽‍♂️</p>
             </div>
         </div>
     </header>
     
-
     <nav class="dropdown-menu">
         <ul>
-            <li>
-                ABOUT BLUEDOG
+            <li class="menu-title"><a href="index.html" class="home-buttom">HOME</a></li>
+            <li class="menu-title">ABOUT THIS WEB 
                 <ul>
-                    <li><a href="#">Dónde está ubicado</a></li>
-                    <li><a href="#">Sobre el equipo de bluedog</a></li>
+                    <li><a href="website.html">About this website</a></li>
+                    <li><a href="machinelearning.html">About the recommendation system</a></li>
+                    <li><a href="https://github.com/paupallares" target="_blank" >About Pau</a></li>
                 </ul>
             </li>
-            <li>
-                ABOUT THE COURSES
+            <li class="menu-title">BLUEDOG
                 <ul>
-                    <li><a href="#">White cart</a></li>
-                    <li><a href="#">Vet school</a></li>
-                    <li><a href="#">Certificate IV</a></li>
+                    <li><a href="location.html">Where is Blue Dog?</a></li>
+                    <li><a href="team.html">The team</a></li>
                 </ul>
             </li>
-            <li>
-                ABOUT THIS WEB
+            <li class="menu-title">COURSES
                 <ul>
-                    <li><a href="#">About Pau</a></li>
-                    <li><a href="#">About the recommendation system</a></li>
+                    <li><a href="whitecard.html">White cart</a></li>
+                    <li><a href="vet.html">Vet school</a></li>
+                    <li><a href="certificate.html">Certificate IV</a></li>
                 </ul>
             </li>
+            
         </ul>
     </nav>
 
-    <!-- Aquí irá el slider -->
+    <!-- slider -->
     <div class="your-slider">
         <div><img src="src/giphy_postHigh.gif" alt="data"></div>
         <div><img src="src/codeThis.gif" alt="letscode"></div>
@@ -60,22 +59,37 @@
     </div>
 
     <main>
-        <div class="explanation">
-            <h2>Welcome!</h2>
-            <p>
-                Thank you for taking the time to explore this modest website. The goal here is to showcase a bit of what I could bring to the company. In the "About This Web" section, you can find more detailed information about this site and insights into the development of the recommendation system.
-            </p>
-            <p>
-                Let me briefly explain the system's premise. The idea is to present users with a form. Based on the information they provide, we can recommend a specific Bluedog course that best aligns with their aspirations and circumstances.
-            </p>
+
+        <!-- main container -->
+        <div class="content-wrapper" style="display: flex; justify-content: space-between;">
+
+            <!-- left block -->
+            <div class="left-content" style="width: 48%; padding: 1%; box-sizing: border-box;">
+                <h2>Welcome! 🤗 </h2>
+                <p>Thank you for taking the time to explore this modest website. The goal here is to showcase a bit of what I could bring to the company. In the "About This Web" section, you can find more detailed information about this site and insights into the development of the recommendation system. 🤖 </p>
+                <p><strong>Let me briefly explain the system's premise. The idea is to present users with a form. Based on the information they provide, can recommend a specific Bluedog course that best aligns with their aspirations and circumstances.</strong></p>
+            </div>
+
+            <!-- right block -->
+            <div class="right-content" style="width: 48%; padding: 1%; box-sizing: border-box;">
+                <h2>Who am I? 👩🏻‍💻</h2>
+                <p> I am a passionate, entrepreneurial, and responsible designer and filmmaker who decided to dive headfirst into the world of programming. Both as a data scientist and developer because all paths led here, to the computer, to the creation of things that generate other things and lead us to other things. 🪛 ❤️ </p>
+                <p>If a survey were conducted among my relatives about which object they associate with me, I'm sure they would all answer: the computer. Not because it's the only thing in my life—I love the outdoors and playing sports—but because it has remained constant throughout my life. I love electronic devices, and I'm good with them. They always call me to fix their printer. 🖨 🚫 </p>
+            </div>
+
         </div>
+
+        <div class="form-explanation">
+            <h2>⚠️ FORM:</h2>
+        </div>
+        
 
         <div>
             <form id="recommendation-form" action="process-form.php" method="post">
                 
                 <!-- Interests -->
                 <div class="form-group">
-                    <label for="interests">Choose the interest you feel most connection with:</label>
+                    <label for="interests">🟢 Choose the interest you feel most connection with 🟢</label>
                     <select id="interests" name="interests[]" multiple>
                         <option value="carpenter">Carpenter</option>
                         <option value="marketing">Marketing</option>
@@ -90,7 +104,7 @@
 
                 <!-- Education -->
                 <div class="form-group">
-                    <label for="education-level">Max education level:</label>
+                    <label for="education-level">🟣 Max education level 🟣</label>
                     <select id="education-level" name="education">
                         <option value="secondary school">Secondary School</option>
                         <option value="high school">High School</option>
@@ -102,7 +116,7 @@
                 
                 <!-- Study -->
                 <div class="form-group">
-                    <label for="study-availability">Study Avaliabiity:</label>
+                    <label for="study-availability">🟡 Study Avaliabiity 🟡</label>
                     <select id="study-availability" name="study-availability">
                         <option value="full-time">Full-time</option>
                         <option value="part-time">Part-time</option>
@@ -112,7 +126,7 @@
 
                 <!-- Job -->
                 <div class="form-group">
-                    <label for="work-availability">Job Avaliabiity:</label>
+                    <label for="work-availability">🔵 Job Avaliabiity 🔵</label>
                     <select id="work-availability" name="availability">
                         <option value="full-time">Full-time</option>
                         <option value="part-time">Part-time</option>
@@ -124,7 +138,7 @@
 
                 <!-- Future -->
                 <div class="form-group">
-                    <label for="future-goals">What are your goals for the next few years?:</label>
+                    <label for="future-goals">🚀 What are your goals for the next few years?: 🚀 </label>
                     <textarea id="future-goals" name="goals" rows="4" cols="50" placeholder="You can write what you want, this will help us to give you a more accurate guidence..."></textarea>
                 </div>
 
@@ -135,18 +149,55 @@
         </div>
     </main>
 
-    <footer>
-        <p>Desarrollado por Paula Pallares para Blue Dog</p>
-    </footer>
+    <footer class="simple-footer">
+        <div class="container">
+            <div class="footer-content">
 
+                <!-- left -->
+                <div class="contact-description">
+                    <h3>📬 contact me</h3>
+                    <p>hi! Im Pau and made this website for training and learning porpuse, cheers! 🍻 </p>
+                </div>
+            
+                <!-- center -->
+                <div class="contact-details">
+                    <ul class="contact-list">
+                        <li>(04) 39736842</li>
+                        <li>ppaupallaresn@gmail.com</li>
+                        <li>Australia</li>
+                    </ul>
+                </div>
+            
+                <!-- right -->
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ppablahoney" target="_blank">
+                        <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/facebook_online_social_media-1024.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.linkdin.com/paupallares" target="_blank">
+                        <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_linked_in-1024.png" alt="Linkdn" class="social-icon">
+                    </a>
+                    <a href="https://vimeo.com/ppaupallares" target="_blank">
+                        <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/vimeo_online_social_media-128.png" alt="Vimeo" class="social-icon">
+                    </a>
+                    <a href="https://www.twitter.com/ppupipallares" target="_blank">
+                        <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_twitter-128.png" alt="Twitter" class="social-icon">
+                    </a>
+                </div>
+            
+            </div>
+            <div class="footer-bottom">
+                <span>© paupallares 2023</span>
+            </div>
+        </div>
+    </footer>
   
-    <!-- Primero, cargamos jQuery -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    <!-- Después, cargamos el script de Slick -->
+    <!-- Slick script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
-    <!-- Por último, cargamos nuestro script personalizado -->
+    <!-- js script -->
     <script src="scripts.js"></script>
 
 

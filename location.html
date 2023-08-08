@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommendation result by Pau</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Location by Pau</title>
+    <link rel="stylesheet" href="style.css"> 
     <link rel="icon" href="src/pp.png" type="image/x-icon">
     
-    <!-- slick -->
+    <!--slick -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+
 
 </head>
 <body>
@@ -23,7 +24,6 @@
         </div>
     </header>
     
-
     <nav class="dropdown-menu">
         <ul>
             <li class="menu-title"><a href="index.html" class="home-buttom">HOME</a></li>
@@ -50,45 +50,12 @@
         </ul>
     </nav>
 
-    <!-- slider -->
-    <div class="your-slider">
-        <div><img src="src/giphy_postHigh.gif" alt="data"></div>
-        <div><img src="src/codeThis.gif" alt="letscode"></div>
-        <div><img src="src/datadata.gif" alt="hackergif"></div>
-        <div><img src="src/hacker.gif" alt="hackergif"></div>
-    </div>    
-
     <main>
-        <div class="result">
-            <h1>Recomendación de Curso</h1>
-            <h2>Tu curso recomendado es:</h2>
-            <a href='ideal.html'><div id="recommendationDisplay"></div></a>
-        </div>
-
         <div class="more-info">
-            <h3>You can find more information about this course here:</h3>
-            <img src="https://bluedogtraining.com.au/storage/app/media/thumbnails/QBCC_Managerial_Course_Button.jpg">
+            <h1>Thanks for stopping by!</h1>
+            <p>Our site is currently under construction. We look forward to seeing you soon.</p>
+            <p>Cheers!</p>
         </div>
-    
-        <script>
-            // URL
-            function getQueryParam(param) {
-                var result = window.location.search.match(new RegExp("(\\?|&)" + param + "(\\[\\])?=([^&]*)"));
-                return result ? decodeURIComponent(result[3].replace(/\+/g, ' ')) : null;
-            }
-        
-            // obtain from URL
-            var recommendation = getQueryParam('recommendation');
-        
-            // show in HTML
-            document.addEventListener('DOMContentLoaded', function() {
-                var displayElement = document.getElementById('recommendationDisplay');
-                if (displayElement && recommendation) {
-                    displayElement.textContent = recommendation;
-                }
-            });
-        </script>
-
     </main>
 
     <footer class="simple-footer">
@@ -132,15 +99,14 @@
             </div>
         </div>
     </footer>
-
   
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    <!-- Slick -->
+    <!-- Slick script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
-    <!-- script -->
+    <!-- js script -->
     <script src="scripts.js"></script>
 
 

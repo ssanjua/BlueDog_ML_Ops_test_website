@@ -11,7 +11,7 @@ $(document).ready(function(){
     });
 });
 
-// Esta función obtiene el valor de un parámetro de la URL por su nombre
+// this function retrieves the value of a URL parameter by its name
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -22,8 +22,8 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-// Usa la función para obtener el valor del parámetro 'recommendation'
+// use the function to get the value of the 'recommendation' parameter.
 const recommendation = getParameterByName('recommendation');
 
-// Muestra la recomendación en el contenedor HTML
+// display the recommendation in the HTML container
 document.getElementById('recommendation').innerText = recommendation;

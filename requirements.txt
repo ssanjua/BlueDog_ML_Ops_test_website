@@ -1,5 +1,0 @@
-fastapi
-pandas
-numpy
-mysql-connector-python
-uvicorn

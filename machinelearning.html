@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML by Pau</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" href="src/pp.png" type="image/x-icon">
+    
+    <!--slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="https://bluedogtraining.com.au/storage/app/media/MAIN_DOGGO_LOGO.svg" alt="BlueDog Logo" class="header-logo">
+            <div class="header-text">
+                <h1>BLUE DOG TRAINING - RECOMMENDATION COURSE</h1>
+                <p>👷🏾 LOOKING FOR WORK? 👷🏻‍♀️ WE ARE HERE TO HELP YOU 👷🏽‍♂️</p>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="dropdown-menu">
+        <ul>
+            <li class="menu-title"><a href="index.html" class="home-buttom">HOME</a></li>
+            <li class="menu-title">ABOUT THIS WEB
+                <ul>
+                    <li><a href="website.html">About this website</a></li>
+                    <li><a href="machinelearning.html">About the recommendation system</a></li>
+                    <li><a href="https://github.com/paupallares" target="_blank" >About Pau</a></li>
+                </ul>
+            </li>
+            <li class="menu-title">BLUEDOG
+                <ul>
+                    <li><a href="location.html">Where is Blue Dog?</a></li>
+                    <li><a href="team.html">The team</a></li>
+                </ul>
+            </li>
+            <li class="menu-title">COURSES
+                <ul>
+                    <li><a href="whitecard.html">White cart</a></li>
+                    <li><a href="vet.html">Vet school</a></li>
+                    <li><a href="certificate.html">Certificate IV</a></li>
+                </ul>
+            </li>
+        
+        </ul>
+    </nav>
+
+    <main>
+        <div class="ml-explanation">
+            <h1>🚀🚀 recommendationSystem -> machineLearning -> decisionTree</h1>
+
+            <h2><strong>about the process</strong></h2>
+            <hr>
+            <ul>
+                <li><a href="#context">Contexto</a></li>
+                <li><a href="#propues">Propuesta</a></li>
+                <li><a href="#db">Data</a></li>
+                <li><a href="#model">Model</a></li>
+                <li><a href="#deploy">Deploy</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+            <hr>
+            <p align="center">
+                <a href="https://skillicons.dev">
+                  <img src="https://skillicons.dev/icons?i=html,js,py,php,css,mysql,git,vscode,fastapi,github,heroku,ps" />
+                </a>
+              </p>
+            <hr>
+            <h1>👩🏻‍💻 ⏳ 💥</h1>
+            <h2 id="context">What's this all about? 🤌🏿</h2>
+            <p>To create a simple yet powerful machine learning recommendation system, allowing users to find the best course offered by Blue Dog.</p>
+            <p>The model used for training and predicting is the Decision Tree. A Decision Tree works by breaking down data into subsets through a series of questions, making it especially suitable for recommendation systems.</p>
+            <p>The user-defined goals text is processed using nltk, a notable natural language processing tool. I applied lemmatization to convert words to their root forms and removed stopwords, which are common words that typically don't add significant meaning to the analysis. Additionally, text preprocessing steps like converting to lowercase and stripping punctuation were undertaken. After these enhancements, we utilized the TF-IDF technique, which measures a word's importance in the text relative to a larger corpus, to ready the data for the decision tree.</p>
+            
+            <h2 id="propues">What about the data? 📊</h2>
+            <p>Yes, well, that part is tricky. Why? Because I had no historical data on the courses and their impact on students, so I had to make it up. Together with ChatGPT, we created a database of 112 entries with "students" and their choices and preferences. Of course, it's not a model that reflects reality because this data is artificially created (and if I wasn't careful, ChatGPT would start creating artists, nuclear scientists, and ant charmers), but it predicts and operates correctly. With quality data, it can be very powerful.</p>
+            <img src="src/mySQLdata.png" alt="Data Visualization">
+            
+            <h2 id="model">Model 🌲</h2>
+            <p><strong>Decision tree</strong> is a flowchart-like structure where each internal node represents a "test" on an attribute, each branch represents the outcome of the test, and each leaf node represents a class label. It's a powerful tool for both classification and regression problems. By visualizing decisions and decision-making, it provides a clear structure and can easily handle both categorical and numerical data.</p>
+            <p>After tweaking several hyperparameters and achieving an accuracy rate of 92%, the model was ready for its final training. Once trained, it was then packaged for the Python script responsible for deployment.</p>
+            <img src="src/modelReport.png" alt="Model Report">
+            
+            <h2 id="deploy">Deploy</h2>
+            <p>The API for the Python script was built using the fastAPI framework and deployed on render.com. Deploying machine learning models for free, especially when involving multiple libraries and version models, can be an almost impossible task. This is because the computational capacity provided by free services is limited, and the requirements of the models are ever-increasing. Still, we made it happen 💪🏻.</p>
+            <a href="https://www.deployapi.com">HERE THE DEPLOY</a>
+            <h2 style="text-align: center;">You can find the entire code in my repository <a href="httpss://www.github.com/ppaupallares" target="_blank">GitHub</a>.</h2>
+            <p style="text-align: center;"><img src="https://media.giphy.com/media/SA6qHijDp7Qn0KMAVP/giphy.gif" height="250" alt="Deployment Animation"></p>
+        </div>
+    </main>
+    
+    <footer class="simple-footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <!-- left -->
+                <div class="contact-description">
+                    <h3>📬 contact me</h3>
+                    <p>hi! Im Pau and made this website for training and learning porpuse, cheers! 🍻 </p>
+                </div>
+            
+                <!-- center -->
+                <div class="contact-details">
+                    <ul class="contact-list">
+                        <li>(04) 39736842</li>
+                        <li>ppaupallaresn@gmail.com</li>
+                        <li>Australia</li>
+                    </ul>
+                </div>
+            
+                <!-- right -->
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ppablahoney" target="_blank">
+                        <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/facebook_online_social_media-1024.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.linkdin.com/paupallares" target="_blank">
+                        <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_linked_in-1024.png" alt="Linkdn" class="social-icon">
+                    </a>
+                    <a href="https://vimeo.com/ppaupallares" target="_blank">
+                        <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/vimeo_online_social_media-128.png" alt="Vimeo" class="social-icon">
+                    </a>
+                    <a href="https://www.twitter.com/ppupipallares" target="_blank">
+                        <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_twitter-128.png" alt="Twitter" class="social-icon">
+                    </a>
+                </div>
+            
+            </div>
+            <div class="footer-bottom">
+                <span>© paupallares 2023</span>
+            </div>
+        </div>
+    </footer>
+  
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- Slick script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <!-- js script -->
+    <script src="scripts.js"></script>
+
+
+</body>
+</html>

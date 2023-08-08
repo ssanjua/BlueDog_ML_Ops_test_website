@@ -1,4 +1,4 @@
-/* Estilo base */
+/* styles */
 body {
     font-family: 'Trebuchet MS', sans-serif;
     line-height: 1.6;
@@ -7,54 +7,71 @@ body {
     background-color: #fff;
 }
 
-header, main, footer {
+a {
+    text-decoration: none;
+    color: #141414;
+}
+
+a:hover {
+    color: #e3733b
+}
+
+main, footer {
+    font-family: 'Trebuchet MS', sans-serif;
     max-width: 100%;
-    margin: 0 auto;
-    
+    /* margin: 0 auto; */
 }
 
 .header {
-    font-family: 'Trebuchet MS', sans-serif;
     background-color: #1a4b86;
     color: #fff;
 }
 
 .header-content {
-    font-family: 'Trebuchet MS', sans-serif;
     display: flex;
     align-items: center;
-    padding: 10px;
-    max-width: 50%; /* Ancho máximo que deseas para el contenido del header */
-    margin: 0 auto; /* Centra el bloque en la página */
+    padding: 5px;
+    max-width: 50%; 
+    margin: 0 auto; 
+}
+
+.logo-container {
+    display: flex; 
+    align-items: center; 
+    margin-right: 20px; 
 }
 
 .header-logo {
-    width: 15%;
-    height: 15%;
+    max-width: 200px;
     margin-right: 20px;
 }
 
 .header-text {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
-
-    flex: 1; /* Ocupa todo el espacio restante después de la imagen */
+    flex: 1; 
 }
 
 .header-text h1 {
-    margin-top: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
     font-size: 24px;
 }
 
 .header-text p {
+    margin-top: 0px;
     margin-bottom: 0;
 }
 
-/* Estilos para el menú desplegable */
 .dropdown-menu {
-    background-color: #e3733b;
+    background-color: #e2e2e2dc;
+    border-top: 8px solid #e3733b;
+    border-bottom: 5px solid #e3733b;
     padding: 10px;
     display: flex;
     justify-content: center;
+}
+
+.menu-title:hover {
+    color: #e3733b 
 }
 
 .dropdown-menu ul {
@@ -74,7 +91,7 @@ header, main, footer {
     display: block;
 }
 
-.dropdown-menu a {
+.dropdown-menu li ul a {
     text-decoration: none;
     color: #141414;
     padding: 5px 10px;
@@ -82,9 +99,10 @@ header, main, footer {
     white-space: nowrap;
 }
 
-.dropdown-menu a:hover {
-    background-color: #356d9e;
+.dropdown-menu li ul a:hover {
+    background-color: #1a4b86;;
     min-width: 260px;
+    color: #fff;
 }
 
 .dropdown-menu ul ul {
@@ -108,42 +126,96 @@ header, main, footer {
 }
 
 .your-slider {
-    width: 80%; /* Puedes ajustar este valor según lo que necesites */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin: auto;
 }
 
+.your-slider img {
+    width: 100%; 
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 main {
     background-color: #fff;
-    max-width: 70%;
+    max-width: 60%;
     padding: 40px 20px;
+    margin: 0 auto;
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
 }
 
-footer {
-    background-color: #356d9e;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* left */
+.left-content {
+    width: 48%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+/* right */
+.right-content {
+    width: 48%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.left-content h2, 
+.right-content h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.left-content p, 
+.right-content p {
+
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .form-group {
     margin-bottom: 20px;
 }
 
+.result {
+    text-align: center;
+}
+
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    text-align: center;
 }
 
-select, textarea {
-    width: 100%;
+select {
+    width: 40%;
     padding: 10px;
-    box-sizing: border-box;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.form-explanation {
+    text-align: center;
+    border-top: 3px solid #e3733b ;
 }
 
 input[type="submit"] {
@@ -154,11 +226,136 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    display: block;
+    margin: 0 auto;
 }
 
 input[type="submit"]:hover {
     background-color: #555;
 }
 
-/* Estilo para el slider (basado en el CSS de Slick que proporcionaste) */
-/* ... tu código de Slick aquí ... */
+footer {
+    background-color: #356d9e;
+    border-top: 5px solid #e3733b;
+    color: #fff;
+    /* text-align: center; */
+    padding: 5px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;     
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;   
+}
+
+/* socials */
+.social-icon {
+    max-width: 35px; 
+    height: auto;
+    margin: 0 5px;
+}
+
+.contact-description,
+.contact-details,
+.social-links {
+    flex: 1; 
+    padding: 0 15px; 
+}
+
+.contact-info {
+    flex: 1; 
+}
+
+.contact-info h3 {
+    margin-bottom: 5px;  
+    margin-top: 0;       
+}
+
+.contact-info p {
+    margin-bottom: 5px;  
+    margin-top: 5px;     
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-list li {
+    margin-bottom: 5px;  
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    text-align: center; 
+    margin-top: 5px;   
+}
+
+.more-info {
+    text-align: center;
+    align-content: center;
+}
+
+#recommendationDisplay {
+    font-size: 24px;  
+    color: #e3733b;  
+    padding: 10px;  
+    background-color: #f4f4f4;  
+    border-radius: 5px;  
+}
+
+#recommendationDisplay:hover {
+    background-color: #1a4b86;  
+}
+
+.explanation img {
+    max-width: 1000px;
+    display: block;
+    width: 100%;
+    align-content: center;
+    margin: auto;
+}
+
+.title-exp {
+    color:#1a4b86; 
+}
+
+.explanation h2 {
+    text-align: center;
+    color:#e3733b;
+}
+
+.explanation h1 {
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.ml-explanation h1 {
+    text-align: center;
+}
+
+.ml-explanation h2 {
+    color:#e3733b;;
+}
+
+.ml-explanation img {
+    max-width: 1000px;
+    display: block;
+    width: 100%;
+    align-content: center;
+    margin: auto;
+}

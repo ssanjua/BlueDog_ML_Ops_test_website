@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommendation result by Pau</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About the web by Pau</title>
+    <link rel="stylesheet" href="style.css"> 
     <link rel="icon" href="src/pp.png" type="image/x-icon">
     
-    <!-- slick -->
+    <!--slick -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
 
@@ -23,7 +23,6 @@
         </div>
     </header>
     
-
     <nav class="dropdown-menu">
         <ul>
             <li class="menu-title"><a href="index.html" class="home-buttom">HOME</a></li>
@@ -47,50 +46,43 @@
                     <li><a href="certificate.html">Certificate IV</a></li>
                 </ul>
             </li>
+        
         </ul>
     </nav>
 
-    <!-- slider -->
-    <div class="your-slider">
-        <div><img src="src/giphy_postHigh.gif" alt="data"></div>
-        <div><img src="src/codeThis.gif" alt="letscode"></div>
-        <div><img src="src/datadata.gif" alt="hackergif"></div>
-        <div><img src="src/hacker.gif" alt="hackergif"></div>
-    </div>    
-
     <main>
-        <div class="result">
-            <h1>Recomendación de Curso</h1>
-            <h2>Tu curso recomendado es:</h2>
-            <a href='ideal.html'><div id="recommendationDisplay"></div></a>
-        </div>
+        <div class="explanation">
+            <h1 class="'title-exp">What better way to showcase one's <br> eagerness and passion <br>than by creating projects?</h1>
+            
+            <hr>
+            <p align="center">
+                <a href="https://skillicons.dev">
+                  <img src="https://skillicons.dev/icons?i=html,js,py,php,css,mysql,git,vscode,fastapi,github,heroku,ps" />
+                </a>
+              </p>
+            <hr>
+            <h1>👩🏻‍💻 ⏳ 💥</h1>
+            <p>This entire website, including the machine learning implementation, is all about passion, drive, and a desire to show what I'm capable of. 💪🏻 
+                So, in my spare time, I decided to apply previous knowledge and experiences, as well as new tools. To demonstrate my versatility, I opted to build 
+                this website from scratch, covering everything from frontend, database management, backend, to the final production deployment.</p>
 
-        <div class="more-info">
-            <h3>You can find more information about this course here:</h3>
-            <img src="https://bluedogtraining.com.au/storage/app/media/thumbnails/QBCC_Managerial_Course_Button.jpg">
-        </div>
-    
-        <script>
-            // URL
-            function getQueryParam(param) {
-                var result = window.location.search.match(new RegExp("(\\?|&)" + param + "(\\[\\])?=([^&]*)"));
-                return result ? decodeURIComponent(result[3].replace(/\+/g, ' ')) : null;
-            }
-        
-            // obtain from URL
-            var recommendation = getQueryParam('recommendation');
-        
-            // show in HTML
-            document.addEventListener('DOMContentLoaded', function() {
-                var displayElement = document.getElementById('recommendationDisplay');
-                if (displayElement && recommendation) {
-                    displayElement.textContent = recommendation;
-                }
-            });
-        </script>
+            <p>The entire project was created in just two and a half days, 🫠 from the idea to its web deployment. 
+            The goal wasn't perfection, but rather <strong>to practice, prove my commitment</strong> to what I set out to do, and affirm that this truly is where I'd love to be.</p>
 
+            <p>The website is simple and basic, structured in <strong>HTML</strong> with <strong>CSS</strong> for styling and <strong>JavaScript</strong>.</p>
+                <img src='src/lan01.png' alt='html + css + js'>
+
+            <p>The offering is a <em>machine learning system</em> that provides users with course recommendations based on their preferences. The form data is sent via a <strong>PHP</strong> post to a <strong>MySQL database</strong>, where it is stored.</p>
+                <img src='src/lan02.png' alt='php + phpmyadmin'>
+
+            <p>Using PHP, a call is made to an <strong>API</strong> (using fastAPI) where <em>the machine learning recommendation system is deployed.</em> This system connects via <strong>Phyton</strong> to the MySQL database and retrieves the latest entry—consisting of the data provided by the user. This data is classified using a <strong>Decision Tree model</strong>, which then returns a recommended course. This recommendation is fetched from the API using PHP and presented to the user in a new window.</p>
+                <img src='src/lan02.png' alt='python'>
+
+            <h2>You can find the entire code in my repository <a href="httpss://www.github.com/ppaupallares" target="_blank">GitHub</a>.</h2>
+
+        </div>
     </main>
-
+    
     <footer class="simple-footer">
         <div class="container">
             <div class="footer-content">
@@ -132,15 +124,14 @@
             </div>
         </div>
     </footer>
-
   
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    <!-- Slick -->
+    <!-- Slick script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
-    <!-- script -->
+    <!-- js script -->
     <script src="scripts.js"></script>
 
 
