@@ -24,4 +24,4 @@ tqdm==4.65.1
 typing_extensions==4.7.1
 tzdata==2023.3
 uvicorn==0.23.2
-sklearn
+scikit-learn
