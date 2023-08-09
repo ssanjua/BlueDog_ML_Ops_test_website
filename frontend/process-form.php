@@ -61,6 +61,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Execute the cURL session and get the response.
     $response = curl_exec($curl);
 
+    // Check if the cURL request resulted in a 405 error
+    $curlInfo = curl_getinfo($curl);
+    if ($curlInfo['http_code'] == 405) {
+        echo "HTTP 405 Error: Method Not Allowed.<br>";
+        echo "Response: " . $response . "<br>";
+        exit();
+    }
+
     // Prepare a SQL statement to insert the form data into the 'answers' table in the database.
     $stmt = $conn->prepare("INSERT INTO answers (interests, education, study, job, goals) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $interests, $education, $studyAvailability, $workAvailability, $futureGoals);
