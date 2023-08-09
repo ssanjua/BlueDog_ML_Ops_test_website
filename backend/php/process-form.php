@@ -10,10 +10,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Database connection parameters.
-$server = "localhost";
+$server = "containers-us-west-179.railway.app";
 $username = "root";
-$password = "";
-$dbname = "user_answer";
+$password = "vCqQBUIcGx1eSkSuXUv2";
+$dbname = "railway";
 
 // Create a new connection to the MySQL database using the provided parameters.
 // The '3307' at the end is the port number. MySQL's default port is usually 3306. 
