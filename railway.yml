@@ -1,0 +1,6 @@
+services:
+  backend:
+    image: "Dockerfile"
+    build:
+      context: "."
+    port: 80
