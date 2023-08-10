@@ -10,10 +10,11 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Database connection parameters.
-$server = "containers-us-west-179.railway.app";
-$username = "root";
-$password = "vCqQBUIcGx1eSkSuXUv2";
-$dbname = "railway";
+$server = "localhost";
+$username = "id21118998_ppaupallares";
+$password = "NEVERmind38@";
+$dbname = "id21118998_db_hosting";
+
 
 // Create a new connection to the MySQL database using the provided parameters.
 // The '3307' at the end is the port number. MySQL's default port is usually 3306. 
@@ -27,7 +28,7 @@ if ($conn->connect_error) {
 
 // Check if the server has received a POST request.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+    
     // Retrieve from the POST request. If 'interests' is an array, convert it to a comma-separated string.
     $interests = is_array($_POST["interests"]) ? implode(", ", $_POST["interests"]) : $_POST["interests"];
     $education = $_POST["education"];
@@ -45,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     // Set the API URL where the data will be sent.
-    $apiUrl = 'http://127.0.0.1:8000/recommend';
+    $apiUrl = '/127.0.0.1:8000/recommend';
 
     // Initialize cURL session to send a POST request.
     $curl = curl_init();
@@ -61,20 +62,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Execute the cURL session and get the response.
     $response = curl_exec($curl);
 
+    // Check if the cURL request resulted in a 405 error
+    $curlInfo = curl_getinfo($curl);
+    if ($curlInfo['http_code'] == 405) {
+        echo "HTTP 405 Error: Method Not Allowed.<br>";
+        echo "Response: " . $response . "<br>";
+        exit();
+    }   
+
     // Prepare a SQL statement to insert the form data into the 'answers' table in the database.
     $stmt = $conn->prepare("INSERT INTO answers (interests, education, study, job, goals) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $interests, $education, $studyAvailability, $workAvailability, $futureGoals);
 
+
+    $outputMessage = "";
+
+
     // Execute the SQL statement and check for errors.
     if (!$stmt->execute()) {
-        echo "Error: " . $stmt->error;
+        $outputMessage = "Error: " . $stmt->error;
     } else {
-        echo "Data saved in database.<br>";
+        $outputMessage = "Data saved in database.<br>";
     }
 
     // If there's an error with the cURL request, display it.
     if (curl_errno($curl)) {
-        echo 'Error when making the request to the models API: ' . curl_error($curl);
+        header("Location: badresult.html");
+        exit();
     } else {
         // Decode the JSON response from the API.
         $result = json_decode($response, true);
@@ -84,8 +98,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: result.html?recommendation=" . urlencode($recommendation));
             exit();
         } else {
-            echo "Something went bad with the recommendation.";
+            // Si la respuesta no contiene una recomendación, redirige a badresult.html.
+            header("Location: badresult.html");
+            exit();
         }
+    }
+
+    if ($outputMessage) {
+        echo $outputMessage;
     }
 
     // Close the SQL statement, the database connection, and the cURL session.
