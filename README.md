@@ -6,6 +6,10 @@
 
 ### What better way to showcase one's eagerness and passion than by creating projects? 
 
+<h1><a href="https://bluedogbypau.000webhostapp.com">WEBSITE</a></h1>h1>
+
+<img src='website.png'>
+
 This entire website, including the machine learning implementation, is all about passion, drive, and a desire to show what I'm capable of. 💪🏻
 So, in my spare time, I decided to apply previous knowledge and experiences, as well as new tools. To demonstrate my versatility, I opted to build this website from scratch, covering everything from frontend, database management, backend, to the final production deployment. 
 The entire project was created in just two and a half days, 🫠 from the idea to its web deployment. 
@@ -17,11 +21,11 @@ The website is simple and basic, structured in **HTML** with **CSS** for styling
 
 The offering is a *machine learning system* that provides users with course recommendations based on their preferences. The form data is sent via a **PHP** post to a **MySQL database**, where it is stored. 
 
-<img src='src/lan02.png'>
+<img src='frontend/src/lan02.png'>
 
 Using PHP, a call is made to an **API** (using fastAPI) where *the machine learning recommendation system is deployed.* This system connects via **Phyton** to the MySQL database and retrieves the latest entry—consisting of the data provided by the user. This data is classified using a **Decision Tree model**, which then returns a recommended course. This recommendation is fetched from the API using PHP and presented to the user in a new window.
 
-<img src='src/lan02.png'>
+<img src='frontend/lan02.png'>
 
 You can find the entire code un my repository <a href='httpss://www.github.com/ppaupallares'> GitGub</a>
 
@@ -58,7 +62,7 @@ To create a simple yet powerful machine learning recommendation system, allowing
 
 Yes, well, that part is tricky. Why? Because I had no historical data on the courses and their impact on students, so I had to make it up. Together with ChatGPT, we created a database of 112 entries with "students" and their choices and preferences. Of course, it's not a model that reflects reality because this data is artificially created (and if I wasn't careful, ChatGPT would start creating artists, nuclear scientists, and ant charmers), but it predicts and operates correctly. With quality data, it can be very powerful.
 
-<img src="src/mySQLdata.png">
+<img src="frontend/mySQLdata.png">
 
 <h2 id="model">  Model 🌲 </h2>
 
@@ -66,7 +70,7 @@ Yes, well, that part is tricky. Why? Because I had no historical data on the cou
 
 After tweaking several hyperparameters and achieving an accuracy rate of 92%, the model was ready for its final training. Once trained, it was then packaged for the Python script responsible for deployment.
 
-<img src="src/modelReport.png">
+<img src="frontend/modelReport.png">
 
 <h2 id="deploy">  Deploy </h2>
 
