@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 // Database connection parameters.
 $server = "localhost";
 $username = "id21118998_ppaupallares";
-$password = "NEVERmind38@";
+$password = "";
 $dbname = "id21118998_db_hosting";
 
 
