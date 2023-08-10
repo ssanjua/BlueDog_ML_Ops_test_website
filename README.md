@@ -25,7 +25,7 @@ The offering is a *machine learning system* that provides users with course reco
 
 Using PHP, a call is made to an **API** (using fastAPI) where *the machine learning recommendation system is deployed.* This system connects via **Phyton** to the MySQL database and retrieves the latest entry—consisting of the data provided by the user. This data is classified using a **Decision Tree model**, which then returns a recommended course. This recommendation is fetched from the API using PHP and presented to the user in a new window.
 
-<img src='frontend/lan02.png'>
+<img src='frontend/src/lan02.png'>
 
 You can find the entire code un my repository <a href='httpss://www.github.com/ppaupallares'> GitGub</a>
 
