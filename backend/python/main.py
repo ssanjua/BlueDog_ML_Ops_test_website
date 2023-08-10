@@ -12,7 +12,7 @@ from joblib import load
 
 app = FastAPI()
 
-def get_data_from_db():
+""" def get_data_from_db():
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
@@ -23,7 +23,9 @@ def get_data_from_db():
 
     df = pd.read_sql("SELECT * FROM modelTraining ORDER BY id  DESC LIMIT 1", conn)
     conn.close()
-    return df
+    return df """
+
+df = pd.read_csv('modelTraining.csv')
 
 # Descargar recursos necesarios de nltk
 nltk.download('stopwords')

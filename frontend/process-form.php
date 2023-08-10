@@ -14,6 +14,7 @@ $server = "containers-us-west-179.railway.app";
 $username = "root";
 $password = "vCqQBUIcGx1eSkSuXUv2";
 $dbname = "railway";
+$port = "6978";
 
 // Create a new connection to the MySQL database using the provided parameters.
 // The '3307' at the end is the port number. MySQL's default port is usually 3306. 
@@ -45,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     // Set the API URL where the data will be sent.
-    $apiUrl = 'http://127.0.0.1:8000/recommend';
+    $apiUrl = 'https://bluedogmlopstest-production.up.railway.app/recommend';
 
     // Initialize cURL session to send a POST request.
     $curl = curl_init();
