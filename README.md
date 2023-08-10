@@ -6,9 +6,9 @@
 
 ### What better way to showcase one's eagerness and passion than by creating projects? 
 
-<h1><a href="https://bluedogbypau.000webhostapp.com">WEBSITE</a></h1>h1>
+<h1><a href="https://bluedogbypau.000webhostapp.com">WEBSITE</a></h1>
 
-<img src='website.png'>
+<img src='frontend/website.png'>
 
 This entire website, including the machine learning implementation, is all about passion, drive, and a desire to show what I'm capable of. 💪🏻
 So, in my spare time, I decided to apply previous knowledge and experiences, as well as new tools. To demonstrate my versatility, I opted to build this website from scratch, covering everything from frontend, database management, backend, to the final production deployment. 
@@ -17,7 +17,7 @@ The goal wasn't perfection, but rather **to practice, prove my commitment** to w
 
 The website is simple and basic, structured in **HTML** with **CSS** for styling and **JavaScript**. 
 
-<img src='src/lan01.png'>
+<img src='frontend/src/lan01.png'>
 
 The offering is a *machine learning system* that provides users with course recommendations based on their preferences. The form data is sent via a **PHP** post to a **MySQL database**, where it is stored. 
 
