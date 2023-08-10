@@ -62,7 +62,7 @@ To create a simple yet powerful machine learning recommendation system, allowing
 
 Yes, well, that part is tricky. Why? Because I had no historical data on the courses and their impact on students, so I had to make it up. Together with ChatGPT, we created a database of 112 entries with "students" and their choices and preferences. Of course, it's not a model that reflects reality because this data is artificially created (and if I wasn't careful, ChatGPT would start creating artists, nuclear scientists, and ant charmers), but it predicts and operates correctly. With quality data, it can be very powerful.
 
-<img src="frontend/mySQLdata.png">
+<img src="frontend/src/mySQLdata.png">
 
 <h2 id="model">  Model 🌲 </h2>
 
@@ -70,7 +70,7 @@ Yes, well, that part is tricky. Why? Because I had no historical data on the cou
 
 After tweaking several hyperparameters and achieving an accuracy rate of 92%, the model was ready for its final training. Once trained, it was then packaged for the Python script responsible for deployment.
 
-<img src="frontend/modelReport.png">
+<img src="frontend/src/modelReport.png">
 
 <h2 id="deploy">  Deploy </h2>
 
