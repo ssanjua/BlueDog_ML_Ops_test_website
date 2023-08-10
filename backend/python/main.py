@@ -7,7 +7,6 @@ import re
 import pandas as pd
 from scipy.sparse import hstack
 import numpy as np
-import mysql.connector
 from joblib import load
 
 app = FastAPI()
