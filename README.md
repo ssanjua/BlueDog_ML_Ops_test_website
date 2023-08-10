@@ -8,7 +8,7 @@
 
 <h1><a href="https://bluedogbypau.000webhostapp.com">WEBSITE</a></h1>
 
-<img src='frontend/website.png'>
+<img src='src/frontend/demo.gif'>
 
 This entire website, including the machine learning implementation, is all about passion, drive, and a desire to show what I'm capable of. 💪🏻
 So, in my spare time, I decided to apply previous knowledge and experiences, as well as new tools. To demonstrate my versatility, I opted to build this website from scratch, covering everything from frontend, database management, backend, to the final production deployment. 
