@@ -31,8 +31,9 @@ main, footer {
     display: flex;
     align-items: center;
     padding: 5px;
-    max-width: 50%; 
-    margin: 0 auto; 
+    max-width: 60%; 
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -44,10 +45,11 @@ main, footer {
 .header-logo {
     max-width: 200px;
     margin-right: 20px;
+    flex: 1;
 }
 
 .header-text {
-    flex: 1; 
+    flex: 2; 
 }
 
 .header-text h1 {
