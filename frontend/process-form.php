@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 
 // Check if the server has received a POST request.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+    
     // Retrieve from the POST request. If 'interests' is an array, convert it to a comma-separated string.
     $interests = is_array($_POST["interests"]) ? implode(", ", $_POST["interests"]) : $_POST["interests"];
     $education = $_POST["education"];
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "HTTP 405 Error: Method Not Allowed.<br>";
         echo "Response: " . $response . "<br>";
         exit();
-    }
+    }   
 
     // Prepare a SQL statement to insert the form data into the 'answers' table in the database.
     $stmt = $conn->prepare("INSERT INTO answers (interests, education, study, job, goals) VALUES (?, ?, ?, ?, ?)");
