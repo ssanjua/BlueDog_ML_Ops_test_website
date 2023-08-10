@@ -22,5 +22,5 @@ starlette==0.27.0
 tqdm==4.65.1
 typing_extensions==4.7.1
 tzdata==2023.3
-uvicorn==0.23.2
+uvicorn
 scikit-learn==1.2.2
