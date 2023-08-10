@@ -26,6 +26,10 @@ app = FastAPI()
 
 df = pd.read_csv('modelTraining.csv')
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello World"}
+
 # Descargar recursos necesarios de nltk
 nltk.download('stopwords')
 nltk.download('wordnet')
